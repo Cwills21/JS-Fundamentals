@@ -1,6 +1,9 @@
-const sayName = function Myname(name, time, age) {
-    console.log(`Good ${time} ${name} you are ${age} years old`);
-};
-sayName();
-// sayName('Collins');
-// sayName('Collins', 'Morning', '20');
+const args = process.argv.slice(2);   // collect arguments after the script name
+
+if (args.length === 0) {
+    console.log('No argument');
+} else if (args.length === 1) {
+    console.log('Argument found');
+} else {
+    console.log('Arguments found');
+}
